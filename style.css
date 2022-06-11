@@ -38,7 +38,13 @@ main img {
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.group-form {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
 }
 
 .item {
@@ -50,12 +56,22 @@ main img {
   flex: 2;
 }
 
+.item-form {
+  flex: 1;
+}
+
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  width 100%;
+}
+
+.center {
+  align-content: center;
+  justify-content: center;
 }
 
 .logo {
@@ -64,11 +80,30 @@ header {
   color: #fff;
 }
 
+header nav {
+  display:flex;
+  flex-direction: row;
+  width 100%;
+  flex-flow: row;
+
+}
+
+header nav ul {
+  display:flex;
+  flex-direction: row;
+  width 100%;
+  flex-flow: row;
+}
+
 header nav ul li {
+  flex: 1;
+  margin: 10px;
   list-style-type: none;
 }
 
 header nav ul li a {
+  display:flex;
+  flex-direction: row;
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
@@ -117,3 +152,20 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+  display:flex;
+  flex-direction: row;
+  
+.nav {
+  display:flex;
+  flex-direction: row;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+}
+
+  
+}
