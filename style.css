@@ -118,6 +118,23 @@ footer p {
 
 /* --- BEGIN MJR --- */
 
+.logo-item-left {
+  flex: 1;
+}
+
+.logo-item-right {
+  flex: 1;
+}
+
+.about-item {
+  flex: 1;
+  margin: 10px;
+}
+
+idea-image {
+  width: 100%;
+}
+
 .group-nav {
   display: flex;
   flex-direction: row;
@@ -126,15 +143,6 @@ footer p {
 .group-form {
   display: flex;
   flex-direction: row;
-}
-
-img-about {
-    margin: 5;
-    padding: 0;
-    border: 5;
-    vertical-align: baseline;
-    width: auto;
-    max-width: auto;
 }
 
 header nav {
@@ -151,6 +159,8 @@ header nav ul {
 .group-section1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .group-section2 {
@@ -173,51 +183,88 @@ header nav ul {
   flex-direction: column;
 }
 
-vertical-alignment {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 /* --- END MJR --- */
 
 /* -------  Media Query ------- */
 
 @media all and (min-width: 600px) {
 
+	header {
+	  background-color: #ff385c;
+	  padding: 0px 0px 0px 0px;
+	  text-align: right;
+	}
+
+	nav-properties {
+	  text-align: right;
+	  margin-left: 85px;
+	  padding-left: 50px;
+	}
+	
+	header nav ul li a {
+	  color: #fff;
+	  text-decoration: none;
+	  text-align: right;
+	}
+
+	.logo {
+	  font-family: "Pangolin", cursive;
+	  font-size: 72px;
+	  color: #fff;
+	  text-align: left;
+	}
+
+	.logo-item-left {
+	  margin: 0px;
+	  padding: 0px;
+	  flex: 2;
+	}
+
+	.logo-item-right {
+	  margin: 0px;
+	  padding: 0px;
+	  flex: 1;
+	}
+
+	.about-item {
+	  flex: 40%;
+	  margin: 10px;
+	  padding: 10px;
+	}
+
+	idea-image {
+	  max-width: 50%;
+	}
+
 	.group-section1 {
 	  display: flex;
 	  flex-direction: row;
 	  justify-content: space-between;
-	  width: 100%;
 	}
 
 	.group-section2 {
 	  display: flex;
 	  flex-direction: row;
-	  flex-shrink: 2;
 	}
 
 	.group-section3 {
 	  display: flex;
 	  flex-direction: row;
-	  align-content: center;
+	  justify-content: center;
+	  align-items: center;
 	}
 
 	.group-section4 {
 	  display: flex;
 	  flex-direction: row;
-	  flex-wrap: row wrap
-	  max-width: 50%;
-	  flex-basis: 50%;
+	  flex-wrap: wrap;
 	}
 
 	.group-section5 {
 	  display: flex;
 	  flex-direction: row;
-	  align-content: center;
+	  justify-content: center;
+	  align-items: center;
 	}
 
 	.group-form {
