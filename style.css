@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  min-width:300px;
 }
 
 h2 {
@@ -43,7 +44,6 @@ main img {
 
 .item {
   flex: 1;
-  margin: 10px;
 }
 
 .item-double {
@@ -55,13 +55,13 @@ main img {
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
-  text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: clamp(2rem, 3rem, 4rem);
   color: #fff;
+  text-align: left;
 }
 
 header nav ul li {
@@ -92,7 +92,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: clamp(100px, 140px, 180px);
 }
 
 form button {
@@ -117,23 +117,6 @@ footer p {
 }
 
 /* --- BEGIN MJR --- */
-
-.logo-item-left {
-  flex: 1;
-}
-
-.logo-item-right {
-  flex: 1;
-}
-
-.about-item {
-  flex: 1;
-  margin: 10px;
-}
-
-idea-image {
-  width: 100%;
-}
 
 .group-nav {
   display: flex;
@@ -190,46 +173,8 @@ header nav ul {
 @media all and (min-width: 600px) {
 
 	header {
-	  background-color: #ff385c;
 	  padding: 0px 0px 0px 0px;
 	  text-align: right;
-	}
-
-	nav-properties {
-	  text-align: right;
-	  margin-left: 85px;
-	  padding-left: 50px;
-	}
-	
-	header nav ul li a {
-	  color: #fff;
-	  text-decoration: none;
-	  text-align: right;
-	}
-
-	.logo {
-	  font-family: "Pangolin", cursive;
-	  font-size: 72px;
-	  color: #fff;
-	  text-align: left;
-	}
-
-	.logo-item-left {
-	  margin: 0px;
-	  padding: 0px;
-	  flex: 2;
-	}
-
-	.logo-item-right {
-	  margin: 0px;
-	  padding: 0px;
-	  flex: 1;
-	}
-
-	.about-item {
-	  flex: 40%;
-	  margin: 10px;
-	  padding: 10px;
 	}
 
 	idea-image {
@@ -239,7 +184,6 @@ header nav ul {
 	.group-section1 {
 	  display: flex;
 	  flex-direction: row;
-	  justify-content: space-between;
 	}
 
 	.group-section2 {
