@@ -1,4 +1,8 @@
 /* -------  General Styles ------- */
+/* -- These general styles wer provided in the starter code for the assessment -- */
+/* -- This code is written using a mobile first development philosophy -- */
+/* -- This means that the base code is written to operate properly on a mobile device -- */
+/* -- Media queries are used to add or adjust styling for larger screen sizes -- */
 
 body {
   font-family: "Lato", sans-serif;
@@ -35,11 +39,17 @@ main img {
 }
 
 /* ---  Groups & Items --- */
+/* -- The code will be using flexbox for creating a responsive website -- */
+/* -- the base code will utilize a row direction of column for most flex boxes in the base design -- */
 
 .group {
   display: flex;
   flex-direction: column;
 }
+
+/* -- One way to reduce the numer of media queries is to use the CSS clamp function -- */
+/* -- The clamp function restricts a value to a minimum value, a flexible value, and a maximum value -- */
+/* -- The flex basis is set to cause the images in the ideas section to be displayed in a 2x2 grid on large screens -- */
 
 .item {
   flex: 1;
@@ -68,6 +78,10 @@ logo-item {
 header {
   background-color: #ff385c;
 }
+
+/* -- We should use rem (root em) rather than pixel sizes when we can -- */
+/* -- a pixel size is unchanging and this could create accessibility issues -- */
+/* -- 1 rem is ususally equivalent to 16 px -- */
 
 .logo {
   font-family: "Pangolin", cursive;
@@ -130,16 +144,20 @@ footer p {
 
 /* --- BEGIN MJR --- */
 
+/* -- This flex box should always be set to row -- */
+/* -- This allows the navigational menu (Stay, About, Ideas, and Host) to be presented horizontally rather than vertically -- */
 .group-nav {
   display: flex;
   flex-direction: row;
 }
 
+/* -- This flex box is set to row for the mobile view which aligns the label and input box horizontally -- */
 .group-form {
   display: flex;
   flex-direction: row;
 }
 
+/* -- This flex box is set to row for the mobile view -- */
 header nav {
   display:flex;
   flex-direction: row;
@@ -151,6 +169,8 @@ header nav ul {
   flex-flow: row;
 }
 
+/* -- This flex box controls section 1 (the logo and nav menu) -- */
+/* -- It is set to stack the logo over the menu in the mobile view -- */
 .group-section1 {
   display: flex;
   flex-direction: column;
@@ -158,21 +178,29 @@ header nav ul {
   align-items: center;
 }
 
+/* -- This flex box controls section 2 (the stay section which is the form) -- */
+/* -- It is set to stack the logo over the menu in the mobile view -- */
 .group-section2 {
   display: flex;
   flex-direction: column;
 }
 
+/* -- This flex box controls section 3 (the about section) -- */
+/* -- It is set to stack the images vertically in the mobile view -- */
 .group-section3 {
   display: flex;
   flex-direction: column;
 }
 
+/* -- This flex box controls section 4 (the ideas section) -- */
+/* -- It is set to stack the information vertically in the mobile view -- */
 .group-section4 {
   display: flex;
   flex-direction: column;
 }
 
+/* -- This flex box controls section 5 (the host section) -- */
+/* -- It is set to stack the images vertically in the mobile view -- */
 .group-section5 {
   display: flex;
   flex-direction: column;
@@ -182,7 +210,8 @@ header nav ul {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+/* -- This media query overrides the base styles (set for the mobile view) for a larger screen -- */
+@media all and (min-width: 480px) {
 
 	header {
 	  padding: 0px 0px 0px 0px;
@@ -210,6 +239,8 @@ header nav ul {
 	  align-items: center;
 	}
 
+/* -- This flex box overrides section 4 (the ideas section) -- */
+/* -- It is set to stack the images as a 2x2 grid in the mobile view -- */
 	.group-section4 {
 	  display: flex;
 	  flex-direction: row;
@@ -229,7 +260,10 @@ header nav ul {
 	}
 }
 
-@media all and (min-width: 600px) and (max-width: 700px) {
+/* -- This media query controls the form display as the web page is scaled from smaller screen to a larger screen -- */
+/* -- As the web site scales down, the form needs to stack before the other sections because the form fields will -- */
+/* -- crash into one another before the 480 pixel breakpoint -- */
+@media all and (min-width: 480px) and (max-width: 700px) {
 
 	.group-section2 {
 	  display: flex;
