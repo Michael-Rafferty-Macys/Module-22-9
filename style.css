@@ -65,6 +65,13 @@ main img {
   padding-bottom: 2px;
 }
 
+.form-button {
+  flex: 1;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 logo-item {
   flex: 1;
 }
@@ -127,7 +134,9 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 100%;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* -------  Footer ------- */
@@ -213,6 +222,16 @@ header nav ul {
 /* -- This media query overrides the base styles (set for the mobile view) for a larger screen -- */
 @media screen and (min-width: 480px) {
 
+	form select,
+	form input {
+	  width: 60px;
+	}
+
+	form button {
+	  width: 60px;
+	  font-size: 12px;
+	}
+
 	header {
 	  padding: 0px 0px 0px 0px;
 	  text-align: right;
@@ -230,7 +249,6 @@ header nav ul {
 	.group-section2 {
 	  display: flex;
 	  flex-direction: row;
-	  flex-wrap: wrap;
 	}
 
 	.group-section3 {
@@ -262,3 +280,179 @@ header nav ul {
 }
 
 
+@media screen and (min-width: 550px) and (max-width: 650px) {
+
+	form select,
+	form input {
+	  width: 85px;
+	}
+
+	form button {
+	  width: 85px;
+	  font-size: 16px;
+	}
+
+	header {
+	  padding: 0px 0px 0px 0px;
+	  text-align: right;
+	}
+
+	idea-image {
+	  max-width: 50%;
+	}
+
+	.group-section1 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section2 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section3 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+/* -- This flex box overrides section 4 (the ideas section) -- */
+/* -- It is set to stack the images as a 2x2 grid in the mobile view -- */
+	.group-section4 {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
+
+	.group-section5 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.group-form {
+	  display: flex;
+	  flex-direction: column;
+	}
+}
+
+@media screen and (min-width: 651px) and (max-width: 900px) {
+
+	form select,
+	form input {
+	  width: 100px;
+	}
+
+	form button {
+	  width: 100px;
+	  font-size: 20px;
+	}
+
+	header {
+	  padding: 0px 0px 0px 0px;
+	  text-align: right;
+	}
+
+	idea-image {
+	  max-width: 50%;
+	}
+
+	.group-section1 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section2 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section3 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+/* -- This flex box overrides section 4 (the ideas section) -- */
+/* -- It is set to stack the images as a 2x2 grid in the mobile view -- */
+	.group-section4 {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
+
+	.group-section5 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.group-form {
+	  display: flex;
+	  flex-direction: column;
+	}
+}
+
+@media screen and (min-width: 901px) and (max-width: 4000px) {
+
+	form select,
+	form input {
+	  width: 150px;
+	}
+
+	form button {
+	  width: 150px;
+	  font-size: 24px;
+	}
+
+	header {
+	  padding: 0px 0px 0px 0px;
+	  text-align: right;
+	}
+
+	idea-image {
+	  max-width: 50%;
+	}
+
+	.group-section1 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section2 {
+	  display: flex;
+	  flex-direction: row;
+	}
+
+	.group-section3 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+/* -- This flex box overrides section 4 (the ideas section) -- */
+/* -- It is set to stack the images as a 2x2 grid in the mobile view -- */
+	.group-section4 {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
+
+	.group-section5 {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.group-form {
+	  display: flex;
+	  flex-direction: column;
+	}
+}
