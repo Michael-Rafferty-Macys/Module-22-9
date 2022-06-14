@@ -2,7 +2,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  min-width:300px;
 }
 
 h2 {
@@ -44,6 +43,20 @@ main img {
 
 .item {
   flex: 1;
+  flex-basis: clamp(0%, 40%, 40%);
+  padding: 0px 10px 0px 10px;
+}
+
+.form-item {
+  flex: 1;
+  padding-right: clamp(2px, 3px, 5px);
+  padding-left: clamp(2px, 3px, 5px);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+logo-item {
+  flex: 1;
 }
 
 .item-double {
@@ -54,7 +67,6 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
 }
 
 .logo {
@@ -62,6 +74,7 @@ header {
   font-size: clamp(2rem, 3rem, 4rem);
   color: #fff;
   text-align: left;
+  padding-left: 5px;
 }
 
 header nav ul li {
@@ -71,7 +84,7 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0 0 0 0;
 }
 
 header nav ul li a:hover {
@@ -82,7 +95,6 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
 }
 
 form label {
@@ -91,8 +103,8 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: clamp(100px, 140px, 180px);
+  margin-bottom: 10px;
+  width: 120px;
 }
 
 form button {
@@ -214,6 +226,19 @@ header nav ul {
 	.group-form {
 	  display: flex;
 	  flex-direction: column;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 700px) {
+
+	.group-section2 {
+	  display: flex;
+	  flex-direction: column;
+	}
+	
+	.group-form {
+	  display: flex;
+	  flex-direction: row;
 	}
 }
 
