@@ -211,7 +211,7 @@ header nav ul {
 /* -------  Media Query ------- */
 
 /* -- This media query overrides the base styles (set for the mobile view) for a larger screen -- */
-@media all and (min-width: 480px) {
+@media screen and (min-width: 480px) {
 
 	header {
 	  padding: 0px 0px 0px 0px;
@@ -230,6 +230,7 @@ header nav ul {
 	.group-section2 {
 	  display: flex;
 	  flex-direction: row;
+	  flex-wrap: wrap;
 	}
 
 	.group-section3 {
@@ -260,19 +261,4 @@ header nav ul {
 	}
 }
 
-/* -- This media query controls the form display as the web page is scaled from smaller screen to a larger screen -- */
-/* -- As the web site scales down, the form needs to stack before the other sections because the form fields will -- */
-/* -- crash into one another before the 480 pixel breakpoint -- */
-@media all and (min-width: 480px) and (max-width: 700px) {
-
-	.group-section2 {
-	  display: flex;
-	  flex-direction: column;
-	}
-	
-	.group-form {
-	  display: flex;
-	  flex-direction: row;
-	}
-}
 
